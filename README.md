@@ -17,50 +17,77 @@ This project will be completed in phases. The first phase will be to work on thi
 
 ## Phase 0: Selection, Analysis & Plan
 
-#### Selected Project: CHOOSE WISELY
+#### Selected Project: Breakout
 
 ### Necessary Features
 What are the core features that your program should have? These should be things that __must__ be implemented in order to make the program useable/playable, not extra features that could be added to make the program more interesting/fun.
 
-YOUR ANSWERS HERE
+1) Driver File
+   a) Display
+   b) Game over
+   c) Reset
+   d) Set Blocks, Racket, Ball
+   e) Check Racket move
+2) Block Class
+   a) Health, Location, Color
+   b) Constructor
+   c) Break Block
+3) Racket Class
+   a) Location
+   b) Constructor
+   c) Move
+4) Ball Class
+   a) Location, xSpeed, ySpeed
+   b) Constructor
+   c) Check collision
+      i)Check if bounce wall or top
+      ii)Check if bounce brick
+      iii)Check if bounce racket
+      iv)Check if bounce bottom
 
 ### Extra Features
 What are some features that are not essential to the program, but you would like to see (provided you have time after completing the necessary features. Theses can be customizations that are not part of the core requirements.
 
-YOUR ANSWERS HERE
+Blocks that take more health to heal, different types of blocks, upgrades, and a shop (Make it a Roguelite)
 
 ### Array Usage
 How will you be using arrays in this project?
 
 1D Array:
-- YOUR ANSER HERE
+For your paddle/paddles and ball/balls based off upgrades
 
 2D Array:
-- YOUR ANSWER HERE
+For the blocks of course
 
 
 ### Controls
 How will your program be controlled? List all keyboard commands and mouse interactions.
 
 Keyboard Commands:
-- LIST OF COMMANDS HERE
+- A, D
 
 Mouse Control:
-- Mouse movement:
-- Mouse pressed:
+- Mouse movement: x and y
+- Mouse pressed: left click
 
 
 ### Classes
 What classes will you be creating for this project? Include the instance variables and methods that you believe you will need. You will be required to create at least 2 different classes. If you are going to use classes similar to those we've made for previous assignments, you will have to add new features to them.
 
-CLASS NAME0
+CLASS Ball
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - x, y, xspeed, yspeed, size, type
 - METHODS
-  - LIST METHODS HERE
+  - hitbottom, hittop, hitside, hitblocktop, hitblockbottom, hitblockside, hitracketleft, hitracketright, checkCol, display
 
-CLASS NAME1
-- Instance variables:
-  - LIST INSTANCE VARS HERE
+CLASS Block
+- Instance variables: 
+  - health, x, y, blength, bwidth
 - METHODS
-  - LIST METHODS HERE
+  - hurt, break, spawn, heal, display
+
+ClASS Racket
+- Instance variables: 
+  - x, y, rwidth, rlength
+- METHODS
+  - move, display
