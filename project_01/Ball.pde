@@ -1,6 +1,6 @@
 class Ball {
   float x, y, diameter;
-  float xVelocity = 2, yVelocity = -2;
+  float xVelocity = 3, yVelocity = -3;
 
   Ball(float x, float y, float diameter) {
     this.x = x;

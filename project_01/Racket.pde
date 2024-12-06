@@ -1,6 +1,6 @@
 class Racket {
   float x, y, width, height;
-  float speed = 8;
+  float speed = 11;
 
   Racket(float x, float y, float width, float height) {
     this.x = x;

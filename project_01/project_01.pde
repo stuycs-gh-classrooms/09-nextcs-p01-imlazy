@@ -10,7 +10,7 @@ void setup() {
   size(800, 600);
   frameRate(60);
   ball = new Ball(300, 300, 10);
-  racket = new Racket(350, 550, 100, 10);
+  racket = new Racket(350, 550, 120, 15);
   bricks = new Brick[rows][cols];
   initializeBricks();
 }
@@ -85,4 +85,5 @@ void resetGame() {
   racket.reset(350, 550);
   brickHits++;
   initializeBricks();
+  gameOver = false;
 }
